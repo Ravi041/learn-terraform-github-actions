@@ -12,10 +12,10 @@ terraform {
   required_version = ">= 1.1.0"
 
   cloud {
-    organization = "gh-actions-demo-ravi041"  
+    organization = "gh-actions-demo-ravi041"
 
     workspaces {
-      name = "gh-actions-demo-2"
+      name = "gh-actions-demo"
     }
   }
 }
@@ -39,7 +39,7 @@ data "aws_ami" "ubuntu" {
     values = ["hvm"]
   }
 
-  owners = ["099720109477"] # Canonical
+  owners = ["099720109477"]
 }
 
 resource "aws_instance" "web" {
